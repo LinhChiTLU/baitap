@@ -1,0 +1,82 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:text="Edit Profile"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"/>
+
+        <!-- Ảnh đại diện -->
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_person"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:padding="8dp"/>
+
+        <TextView
+            android:text="Change Picture"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/purple_500"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/editUsername"
+            android:hint="Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Email (không sửa được) -->
+        <EditText
+            android:id="@+id/editEmail"
+            android:hint="Email"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Số điện thoại -->
+        <EditText
+            android:id="@+id/editPhone"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Mật khẩu -->
+        <EditText
+            android:id="@+id/editPassword"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Nút Update -->
+        <Button
+            android:id="@+id/btnUpdate"
+            android:text="Update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000"
+            android:textColor="#FFF"
+            android:layout_marginTop="24dp"/>
+    </LinearLayout>
+</ScrollView>

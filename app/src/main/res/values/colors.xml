@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <color name="pinkBackground">#F1ABD0</color>
     <color name="textColor">#030A8A</color> <!-- Màu chữ MoneyMate -->
     <color name="white">#FFFFFF</color>
     <color name="nav_selected">#6200EE</color> <!-- màu khi được chọn -->
-    <color name="nav_unselected">#9E9E9E</color>
-
-
+    <color name="nav_unselected">#9E9E9E</color><!-- Màu chữ MoneyMate -->
+    <color name="primaryColor">#6200EE</color>
+    <color name="gray">#D3D3D3</color>
+    <color name="purple_500">#9C27B0</color>
+    <color name="selected_button_color">#A66DD4</color> <!-- Màu cho nút được chọn -->
+    <color name="unselected_button_color">#D3D3D3</color>
+    <color name="rose_500">#f28b82</color>
+    <color name="income_inactive_bg">#EDEDED</color><!-- Màu cho nút chưa được chọn -->
 </resources>

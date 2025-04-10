@@ -34,17 +34,30 @@ android {
 
 dependencies {
 
+    // AndroidX + Material Design
     implementation(libs.appcompat)
-    implementation(libs.material)
+    implementation(libs.material) // Đã có, không cần thêm dòng "material:1.11.0"
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.navigation.fragment)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.ext.junit)
-    androidTestImplementation(libs.espresso.core)
+
+    // CardView
+    implementation("androidx.cardview:cardview:1.0.0")
+
+    // Glide for image loading
+    implementation("com.github.bumptech.glide:glide:4.15.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.15.0")
+
+    // Firebase (sử dụng BoM)
     implementation(platform("com.google.firebase:firebase-bom:33.10.0"))
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
-    implementation ("com.google.firebase:firebase-database:20.3.0")
-    implementation ("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-database")
+    implementation ("com.google.android.material:material:1.11.0")
+
+
+    // Testing
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.ext.junit)
+    androidTestImplementation(libs.espresso.core)
 }

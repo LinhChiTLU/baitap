@@ -21,6 +21,7 @@ public class Login2Activity extends AppCompatActivity {
 
     EditText etEmail, etPassword;
     Button btnLogin, btnSignup;
+    TextView tvForgotPassword;
     FirebaseAuth mAuth;
 
     @Override
@@ -40,6 +41,7 @@ public class Login2Activity extends AppCompatActivity {
         etPassword = findViewById(R.id.et_pass);
         btnLogin = findViewById(R.id.btn_login);
         btnSignup = findViewById(R.id.btn_signup);
+        tvForgotPassword = findViewById(R.id.tv_forgot_password);
 
         // Khởi tạo FirebaseAuth
         mAuth = FirebaseAuth.getInstance();
@@ -57,9 +59,10 @@ public class Login2Activity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
                                 Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                                // Chuyển sang HomeActivity và xoá stack đăng nhập
                                 Intent intent = new Intent(Login2Activity.this, HomeActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
-                                finish();
                             } else {
                                 Toast.makeText(this, "Email hoặc mật khẩu không đúng", Toast.LENGTH_SHORT).show();
                             }
@@ -72,12 +75,11 @@ public class Login2Activity extends AppCompatActivity {
             Intent intent = new Intent(Login2Activity.this, RegisterActivity.class);
             startActivity(intent);
         });
-        TextView tv_forgot_password;
-        tv_forgot_password = findViewById(R.id.tv_forgot_password);
-        tv_forgot_password.setOnClickListener(v -> {
+
+        // Quên mật khẩu
+        tvForgotPassword.setOnClickListener(view -> {
             Intent intent = new Intent(Login2Activity.this, ForgotActivity.class);
             startActivity(intent);
         });
-
     }
 }
